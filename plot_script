@@ -1,0 +1,12 @@
+# Run gnuplot and type load "file name"
+
+set grid
+set size square
+set xlabel "u"
+set ylabel "y"
+set title "LDC Re=1000"
+plot "LDC_output_Re1000_nx51.txt"  using 2:1 with lines  lt rgb "red"        title '51x51'   , \
+     "LDC_output_Re1000_nx101.txt" using 2:1 with lines  lt rgb "green"      title '101x101' , \
+     "LDC_output_Re1000_nx151.txt" using 2:1 with lines  lt rgb "blue"       title '151x151' , \
+     "Ghia_Re1000_UVel.txt"        using 2:1 with points lt rgb "black" pt 7 title 'Ghia'
+set key right bottom
